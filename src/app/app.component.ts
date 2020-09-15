@@ -14,6 +14,5 @@ export class AppComponent {
   changePlatform(value:string){
     this.platform=value;
     this.baseUrl=this.url+this.platform;
-    console.log(this.baseUrl)
   }
 }
