@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DarvoDetailComponent } from './darvo-detail/darvo-detail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PlatformComponent } from './platform/platform.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DarvoDetailComponent,
+    PlatformComponent
   ],
   imports: [
     BrowserModule,

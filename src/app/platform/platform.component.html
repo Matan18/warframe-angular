@@ -1,0 +1,5 @@
+<select (change)="changeFunction($event.target.value)">
+  <option 
+  *ngFor="let option of platformOptions"
+  value="{{option.initial}}">{{option.name}}</option>
+</select>

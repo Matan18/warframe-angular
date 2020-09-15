@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Warframe';
+  platform='pc';
+  url='https://api.warframestat.us/';
+  baseUrl=this.url+this.platform;
+
+  changePlatform(value:string){
+    this.platform=value;
+    this.baseUrl=this.url+this.platform;
+    console.log(this.baseUrl)
+  }
 }

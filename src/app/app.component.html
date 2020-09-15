@@ -1,6 +1,7 @@
 <header>
   <h1>{{title}}</h1>
   <p>Encontre todos os itens que procura</p>
+  <app-platform (onChangePlatform)="changePlatform($event)"></app-platform>
 </header>
 
   <app-darvo-detail ></app-darvo-detail>
