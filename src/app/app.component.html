@@ -4,7 +4,7 @@
   <app-platform (onChangePlatform)="changePlatform($event)"></app-platform>
 </header>
 
-  <app-darvo-detail ></app-darvo-detail>
+<app-darvo-detail [baseUrl]="baseUrl" ></app-darvo-detail>
 <router-outlet></router-outlet>
 
 <footer>

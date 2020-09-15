@@ -1,23 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { map, tap } from "rxjs/operators";
+import { map } from "rxjs/operators";
 import { IDarvoDailyDeals, IDarvoDealsInfo } from "./DarvoDeals";
 import { Observable } from 'rxjs';
-import { Timestamp } from 'rxjs/internal/operators/timestamp';
-import { notEqual } from 'assert';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ListService {
-
   constructor(
     private http: HttpClient
   ) { }
 
-  getDarvoDeals(): Observable<IDarvoDealsInfo[]> {
+  param="/dailyDeals"
 
-    return this.http.get<IDarvoDailyDeals[]>('https://api.warframestat.us/pc/dailyDeals')
+  getDarvoDeals(baseUrl:string): Observable<IDarvoDealsInfo[]> {
+
+    return this.http.get<IDarvoDailyDeals[]>(baseUrl+this.param)
       .pipe(
         map(details => details
           .map(deal => {

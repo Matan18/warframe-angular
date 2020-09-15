@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnChanges } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IDarvoDealsInfo } from './DarvoDeals';
 import { ListService } from './list.service';
@@ -8,17 +8,17 @@ import { ListService } from './list.service';
   templateUrl: './darvo-detail.component.html',
   styleUrls: ['./darvo-detail.component.sass']
 })
-export class DarvoDetailComponent implements OnInit {
+export class DarvoDetailComponent implements OnChanges {
 
   deals: Observable<IDarvoDealsInfo[]>
 
-  @Input() count: number;
+  @Input() baseUrl: string;
 
   constructor(
     private listDealsService: ListService
   ) { }
 
-  ngOnInit(): void {
-    this.deals = this.listDealsService.getDarvoDeals();
+  ngOnChanges() {
+    this.deals = this.listDealsService.getDarvoDeals(this.baseUrl);
   }
 }
