@@ -1,4 +1,5 @@
 
+
 // https://api.warframestat.us/pc/alerts
 export interface IAlerts {
   mission: {
@@ -44,6 +45,25 @@ export interface IAlerts {
     string
   ]
 }
+
+
+// https://api.warframestat.us/pc/persistentEnemies
+// Commonly array
+export interface IPersistentEnemies {
+  locationTag: string,
+  agentType: string,
+  rank: number,
+  healthPercent: number,
+  fleeDamage: number,
+  region: string,
+  lastDiscoveredTime: string,
+  lastDiscoveredAt: string,
+  isDiscovered: boolean,
+  isUsingTicketing: boolean,
+  pid: string
+}
+
+
 
 // https://api.warframestat.us/pc/arbitration
 export interface IArbitrationData {
@@ -106,6 +126,8 @@ export interface IEaryhCycle {
   state: string,
   timeLeft: string
 }
+
+
 
 // https://api.warframestat.us/pc/events
 export interface IEvents {
@@ -221,23 +243,6 @@ export interface IEvents {
   }
 }
 
-// https://api.warframestat.us/pc/fissures
-// Commonly array
-export interface IFissure {
-  id: string,
-  activation: string,
-  startString: string,
-  expiry: string,
-  active: boolean,
-  node: string,
-  missionType: string,
-  enemy: string,
-  tier: string,
-  tierNum: number,
-  expired: boolean,
-  eta: string
-}
-
 
 
 // https://api.warframestat.us/pc/globalUpgrades
@@ -254,68 +259,8 @@ export interface IGlobalUpdates {
   desc: string
 }
 
-export interface IInvasions {
-  defenderReward: {
-    countedItems: [
-      {
-        count: number,
-        type: string
-      }
-    ],
-    thumbnail: string,
-    color: number,
-    credits: number,
-    asString: string,
-    items: [
-      {}
-    ],
-    itemString: string
-  },
-  attackingFaction: string,
-  completion: number,
-  attackerReward: {
-    countedItems: [
-      {
-        count: number,
-        type: string
-      }
-    ],
-    thumbnail: string,
-    color: number,
-    credits: number,
-    asString: string,
-    items: [
-      {}
-    ],
-    itemString: string
-  },
-  count: number,
-  completed: true,
-  requiredRuns: number,
-  vsInfestation: true,
-  node: string,
-  eta: string,
-  defendingFaction: string,
-  id: string,
-  activation: string,
-  rewardTypes: [
-    string
-  ],
-  desc: string
-}
 
-// https://api.warframestat.us/pc/kuva
-// Commonly array
-export interface IKuva {
-  activation: string,
-  expiry: string,
-  node: string,
-  enemy: string,
-  type: string,
-  node_type: string,
-  archwing: boolean,
-  sharkwing: boolean
-}
+
 
 // https://api.warframestat.us/pc/news
 // Commonly array
@@ -384,21 +329,92 @@ export interface INightwave {
 }
 
 
-// https://api.warframestat.us/pc/persistentEnemies
-// Commonly array
-export interface IPersistentEnemies {
-  locationTag: string,
-  agentType: string,
-  rank: number,
-  healthPercent: number,
-  fleeDamage: number,
-  region: string,
-  lastDiscoveredTime: string,
-  lastDiscoveredAt: string,
-  isDiscovered: boolean,
-  isUsingTicketing: boolean,
-  pid: string
+export interface IInvasions {
+  defenderReward: {
+    countedItems: [
+      {
+        count: number,
+        type: string
+      }
+    ],
+    thumbnail: string,
+    color: number,
+    credits: number,
+    asString: string,
+    items: [
+      {}
+    ],
+    itemString: string
+  },
+  attackingFaction: string,
+  completion: number,
+  attackerReward: {
+    countedItems: [
+      {
+        count: number,
+        type: string
+      }
+    ],
+    thumbnail: string,
+    color: number,
+    credits: number,
+    asString: string,
+    items: [
+      {}
+    ],
+    itemString: string
+  },
+  count: number,
+  completed: true,
+  requiredRuns: number,
+  vsInfestation: true,
+  node: string,
+  eta: string,
+  defendingFaction: string,
+  id: string,
+  activation: string,
+  rewardTypes: [
+    string
+  ],
+  desc: string
 }
+
+
+// https://api.warframestat.us/pc/kuva
+// Commonly array
+export interface IKuva {
+  activation: string,
+  expiry: string,
+  node: string,
+  enemy: string,
+  type: string,
+  node_type: string,
+  archwing: boolean,
+  sharkwing: boolean
+}
+
+
+
+
+
+// https://api.warframestat.us/pc/fissures
+// Commonly array
+export interface IFissure {
+  id: string,
+  activation: string,
+  startString: string,
+  expiry: string,
+  active: boolean,
+  node: string,
+  missionType: string,
+  enemy: string,
+  tier: string,
+  tierNum: number,
+  expired: boolean,
+  eta: string
+}
+
+
 export interface IArcane {
   regex: string,
   name: string,
