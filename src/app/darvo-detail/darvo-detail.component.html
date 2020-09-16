@@ -1,13 +1,34 @@
 <h1>Darvo</h1>
-<ul>
-  <li *ngFor="let deal of deals|async">
-    <strong>{{deal.name}}</strong>
-    <p>{{deal.originalPrice}} Platinas</p>
-    <p>{{deal.salePrice}} Platinas</p>
-    <p>{{deal.available}} de {{deal.amount}} disponíveis</p>
-    <p>Expira em {{deal.until | date: ' H:mm'}} hrs, às {{deal.expiry | date: ' H:mm'}}</p>
-  </li>
-</ul>
+<div id='container'>
+  <div>
+    <h3>Oferta do Dia</h3>
+    <ul>
+      <li *ngFor="let deal of deals|async">
+        <div>
+          <strong>{{deal.name}}</strong>
+          <p>De {{deal.originalPrice}} Platinas</p>
+          <p>Por {{deal.salePrice}} Platinas</p>
+          <p>{{deal.available}} de {{deal.amount}} disponíveis</p>
+          <p>Expira em {{deal.until | date: " H:mm 'hrs'"}}, às {{deal.expiry | date: " H:mm 'hrs'"}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h3>Outros Produtos</h3>
+    <ul>
+      <li *ngFor="let deal of sales|async">
+        <div>
+          <strong>{{deal.item}}</strong>
+          <p>{{deal.premiumOverride}} Platinas</p>
+          <p>Desconto de {{deal.discount}} %</p>
+          <p>Expira dia {{deal.expiry|date: "dd/MM/yyyy 'às' H:mm 'hrs'"}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
 
 <div>
 </div>
