@@ -238,22 +238,7 @@ export interface IFissure {
   eta: string
 }
 
-// https://api.warframestat.us/pc/flashSales
-// Commonly array
-export interface IDarvoSales {
-  item: string,
-  expiry: string,
-  activation: string,
-  discount: number,
-  regularOverride: number,
-  premiumOverride: number,
-  isShownInMarket: boolean,
-  isFeatured: boolean,
-  isPopular: boolean,
-  id: string,
-  expired: boolean,
-  eta: string
-}
+
 
 // https://api.warframestat.us/pc/globalUpgrades
 // Commonly array
@@ -414,6 +399,33 @@ export interface IPersistentEnemies {
   isUsingTicketing: boolean,
   pid: string
 }
+export interface IArcane {
+  regex: string,
+  name: string,
+  effect: string,
+  rarity: string,
+  location: string,
+  thumbnail: string,
+  info: string
+}
+
+
+// https://api.warframestat.us/pc/flashSales
+// Commonly array
+export interface IDarvoSales {
+  item: string,
+  expiry: string,
+  activation: string,
+  discount: number,
+  regularOverride: number,
+  premiumOverride: number,
+  isShownInMarket: boolean,
+  isFeatured: boolean,
+  isPopular: boolean,
+  id: string,
+  expired: boolean,
+  eta: string
+}
 
 // Commonly Array
 export interface IWarframe {
@@ -564,14 +576,4 @@ export interface IWeapon {
   disposition: number,
   releaseDate: string,
   vaultDate: string
-}
-
-export interface IArcane {
-  regex: string,
-  name: string,
-  effect: string,
-  rarity: string,
-  location: string,
-  thumbnail: string,
-  info: string
 }
