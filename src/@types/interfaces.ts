@@ -127,6 +127,21 @@ export interface IEaryhCycle {
   timeLeft: string
 }
 
+// https://api.warframestat.us/pc/globalUpgrades
+// Commonly array
+export interface IGlobalUpdates {
+  start: string,
+  end: string,
+  upgrade: string,
+  operation: string,
+  operationSymbol: string,
+  upgradeOperationValue: number,
+  expired: boolean,
+  eta: string,
+  desc: string
+}
+
+
 
 
 // https://api.warframestat.us/pc/events
@@ -242,25 +257,6 @@ export interface IEvents {
     activation: string
   }
 }
-
-
-
-// https://api.warframestat.us/pc/globalUpgrades
-// Commonly array
-export interface IGlobalUpdates {
-  start: string,
-  end: string,
-  upgrade: string,
-  operation: string,
-  operationSymbol: string,
-  upgradeOperationValue: number,
-  expired: boolean,
-  eta: string,
-  desc: string
-}
-
-
-
 
 // https://api.warframestat.us/pc/news
 // Commonly array
