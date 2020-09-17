@@ -118,7 +118,7 @@ export interface IConstructionProgress {
 
 
 //https://api.warframestat.us/pc/earthCycle
-export interface IEaryhCycle {
+export interface IEarthCycle {
   id: string,
   expiry: string,
   activation: string,
