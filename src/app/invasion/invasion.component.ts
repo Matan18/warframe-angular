@@ -15,10 +15,12 @@ export class InvasionComponent implements OnInit {
     private listService: ListService
   ) { }
 
-  invasions: Observable<IInvasions[]>;
+  invasions: IInvasions[];
 
   ngOnInit(): void {
-    this.invasions = this.listService.getInvasions(this.baseUrl);
+    this.listService.getInvasions(this.baseUrl).subscribe(invasions=>
+      this.invasions=invasions 
+      )
   }
 
 }
