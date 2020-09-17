@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { IFissure } from './Fissure';
 import { ListService } from './list.service';
 
@@ -14,10 +13,12 @@ export class FissureComponent implements OnInit {
   constructor(
     private listService:ListService
   ) { }
-  fissures:Observable<IFissure[]>
+  fissures:IFissure[]
 
   ngOnInit(): void {
-    this.fissures=this.listService.getFissures(this.baseUrl);
+    this.listService.getFissures(this.baseUrl).subscribe(fissures=>
+      this.fissures=fissures
+      )
   }
 
 }
