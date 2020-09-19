@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { map } from "rxjs/operators";
 import { Observable } from 'rxjs';
 import { IAlerts } from './Alerts';
 
@@ -9,8 +8,8 @@ import { IAlerts } from './Alerts';
   providedIn: 'root'
 })
 export class ListService {
+  param: string = '/alerts';
 
-  param: '/alerts'
   constructor(
     private http: HttpClient
   ) { }

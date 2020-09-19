@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges } from '@angular/core';
+import { IAlerts } from './Alerts';
 import { ListService } from './list.service';
 
 @Component({
@@ -10,11 +11,14 @@ export class AlertsComponent implements OnChanges {
 
   @Input() baseUrl: string;
   constructor(
-    private listService:ListService
+    private listService: ListService
   ) { }
+  alerts: IAlerts[]
 
   ngOnChanges(): void {
-    console.log("Alert",this.baseUrl)
+    this.listService.getAlerts(this.baseUrl).subscribe(alerts =>
+      this.alerts = alerts)
+
   }
 
 }
