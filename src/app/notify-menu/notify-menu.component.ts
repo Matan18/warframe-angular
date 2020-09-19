@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -9,6 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class NotifyMenuComponent implements OnInit {
 
+  @Input() baseUrl:string;
   menuItems = new Observable<IItemList[]>(observer => {
     observer.next(itemList)
     observer.complete()

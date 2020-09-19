@@ -8,13 +8,15 @@ import { DarvoDetailComponent } from './darvo-detail/darvo-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PlatformComponent } from './platform/platform.component';
 import { NotifyMenuComponent } from './notify-menu/notify-menu.component';
+import { CetusStatusComponent } from "./cetus-status/cetus-status.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     DarvoDetailComponent,
     PlatformComponent,
-    NotifyMenuComponent
+    NotifyMenuComponent,
+    CetusStatusComponent,
   ],
   imports: [
     BrowserModule,

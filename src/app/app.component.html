@@ -4,8 +4,8 @@
   <app-platform (onChangePlatform)="changePlatform($event)"></app-platform>
 </header>
 
+<app-notify-menu [baseUrl]='baseUrl'></app-notify-menu>
 <!-- <app-darvo-detail [baseUrl]="baseUrl" ></app-darvo-detail> -->
-<app-notify-menu></app-notify-menu>
 <router-outlet></router-outlet>
 
 <footer>
