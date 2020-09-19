@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PlatformComponent } from './platform/platform.component';
 import { NotifyMenuComponent } from './notify-menu/notify-menu.component';
 import { CetusStatusComponent } from "./notify-menu/cetus-status/cetus-status.component";
+import { AlertsComponent } from './notify-menu/alerts/alerts.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CetusStatusComponent } from "./notify-menu/cetus-status/cetus-status.co
     PlatformComponent,
     NotifyMenuComponent,
     CetusStatusComponent,
+    AlertsComponent
   ],
   imports: [
     BrowserModule,
