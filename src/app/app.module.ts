@@ -10,6 +10,7 @@ import { PlatformComponent } from './platform/platform.component';
 import { NotifyMenuComponent } from './notify-menu/notify-menu.component';
 import { CetusStatusComponent } from "./notify-menu/cetus-status/cetus-status.component";
 import { AlertsComponent } from './notify-menu/alerts/alerts.component';
+import { EarthcycleComponent } from './notify-menu/earthcycle/earthcycle.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AlertsComponent } from './notify-menu/alerts/alerts.component';
     PlatformComponent,
     NotifyMenuComponent,
     CetusStatusComponent,
-    AlertsComponent
+    AlertsComponent,
+    EarthcycleComponent
   ],
   imports: [
     BrowserModule,
