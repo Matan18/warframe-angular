@@ -11,6 +11,7 @@ import { NotifyMenuComponent } from './notify-menu/notify-menu.component';
 import { CetusStatusComponent } from "./notify-menu/cetus-status/cetus-status.component";
 import { AlertsComponent } from './notify-menu/alerts/alerts.component';
 import { EarthcycleComponent } from './notify-menu/earthcycle/earthcycle.component';
+import { ArbitrationComponent } from './notify-menu/arbitration/arbitration.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EarthcycleComponent } from './notify-menu/earthcycle/earthcycle.compone
     NotifyMenuComponent,
     CetusStatusComponent,
     AlertsComponent,
-    EarthcycleComponent
+    EarthcycleComponent,
+    ArbitrationComponent
   ],
   imports: [
     BrowserModule,
