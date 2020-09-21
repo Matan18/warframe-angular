@@ -1,6 +1,9 @@
 <h1>Alerts</h1>
-<ul>
+<ul *ngIf="alerts.length>0; else elseBlock">
   <li *ngFor="let alert of alerts">
     <strong>{{alert.mission.node}}</strong>
   </li>
 </ul>
+<ng-template #elseBlock>
+  <h3>No momento não há Alertas</h3>
+</ng-template>
