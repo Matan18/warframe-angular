@@ -20,7 +20,22 @@ export class ArbitrationComponent implements OnChanges {
     this.searchService.getArbitration(this.baseUrl).subscribe(arbitration =>
       this.arbitration = arbitration
     )
+  }
 
+
+  countDown(date: string): Date {
+    //colocar como repetitivo
+    const expiry = new Date(date);
+    const now = new Date(Date.now());
+    const diff =
+      new Date(expiry.getFullYear() - now.getFullYear(),
+        expiry.getMonth() - now.getMonth(),
+        expiry.getDate() - now.getDate(),
+        expiry.getHours() - now.getHours(),
+        expiry.getMinutes() - now.getMinutes(),
+        expiry.getSeconds() - now.getSeconds()
+      )
+    return diff
   }
 
 }
