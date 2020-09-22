@@ -1,6 +1,14 @@
-<ul>
-  <li *ngFor="let invasion of invasions">
-    <strong>{{invasion.node}}</strong>
-
-  </li>
-</ul>
+<div>
+  <h3>Invasões</h3>
+  <ul>
+    <li *ngFor="let invasion of invasions">
+      <div>
+        <strong>{{invasion.node}}: {{invasion.desc}}</strong>
+        <div>
+          <p>{{invasion.attackingFaction}} {{invasion.completion| number: "2.1"}}%</p>
+          <p> {{100-invasion.completion| number: "2.1"}}% {{invasion.defendingFaction}}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
