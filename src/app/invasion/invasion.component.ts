@@ -35,6 +35,6 @@ export class InvasionComponent implements OnInit {
     if (completion < 0) {
       return `linear-gradient(to right, ${this.cores[deffendinFaction]} 100%, ${this.cores[deffendinFaction]} 100% )`
     }
-    return `linear-gradient(to right, ${this.cores[attackingFaction]} ${completion}%, ${this.cores[deffendinFaction]} ${100 - completion}% )`
+    return `linear-gradient(to right, ${this.cores[attackingFaction]} ${completion}%, ${this.cores[deffendinFaction]} ${completion}% )`
   }
 }
