@@ -48,7 +48,7 @@ interface IItemList {
 const itemList: IItemList[] = [
   {
     id: 0,
-    name: 'Cetus',
+    name: 'World-Cycles',
     selected: false
   },
   {
@@ -58,32 +58,27 @@ const itemList: IItemList[] = [
   },
   {
     id: 2,
-    name: 'Earth',
-    selected: false
-  },
-  {
-    id: 3,
     name: 'Alertas/Arbritragens',
     selected: false
   },
   {
-    id: 4,
+    id: 3,
     name: 'Invasions',
     selected: false
   },
   {
-    id: 5,
+    id: 4,
     name: 'Syndicato',
     selected: false
   },
   {
-    id: 6,
+    id: 5,
     name: 'Fissures',
     selected: false
   },
   {
-    id: 7,
-    name: 'Recompensas',
+    id: 6,
+    name: 'Rewards',
     selected: false
   },
 ]

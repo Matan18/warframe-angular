@@ -12,14 +12,15 @@
     </li>
   </ul>
   <div [ngSwitch]="selectedValue">
-    <div *ngSwitchCase="'Cetus'">
+    <div *ngSwitchCase="'World-Cycles'">
       <app-cetus-status [baseUrl]="baseUrl"></app-cetus-status>
+      <app-earthcycle [baseUrl]="baseUrl"></app-earthcycle>
+      <app-vallis-status [baseUrl]="baseUrl"></app-vallis-status>
     </div>
     <div *ngSwitchCase="'Events'">
       <h1>Cetus</h1>
     </div>
     <div *ngSwitchCase="'Earth'">
-      <app-earthcycle [baseUrl]="baseUrl"></app-earthcycle>
     </div>
     <div *ngSwitchCase="'Alertas/Arbritragens'">
       <app-alerts [baseUrl]="baseUrl"></app-alerts>
