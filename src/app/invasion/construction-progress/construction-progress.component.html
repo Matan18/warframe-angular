@@ -1,13 +1,21 @@
 <div *ngIf="constructionProgress">
-  <h3>Situação da Construção</h3>
   <div>
+    <h3>Situação da Construção</h3>
     <div>
-      <p>Grineer</p>
-      <h1 >{{constructionProgress.fomorianProgress}}</h1>
-    </div>
-    <div>
-      <h1 >{{constructionProgress.razorbackProgress}}</h1>
-      <p>Corpus</p>
+      <div>
+        <p>Grineer</p>
+        <div>
+          <h1>{{constructionProgress.fomorianProgress}}%</h1>
+          <p>Fomorian</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <h1>{{constructionProgress.razorbackProgress}}%</h1>
+          <p>Armada RazorBack</p>
+        </div>
+        <p>Corpus</p>
+      </div>
     </div>
   </div>
 </div>
