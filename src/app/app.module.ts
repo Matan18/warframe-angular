@@ -8,13 +8,15 @@ import { DarvoDetailComponent } from './darvo-detail/darvo-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PlatformComponent } from './platform/platform.component';
 import { InvasionComponent } from './invasion/invasion.component';
+import { ConstructionProgressComponent } from './invasion/construction-progress/construction-progress.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DarvoDetailComponent,
     PlatformComponent,
-    InvasionComponent
+    InvasionComponent,
+    ConstructionProgressComponent
   ],
   imports: [
     BrowserModule,
