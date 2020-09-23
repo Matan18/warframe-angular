@@ -11,5 +11,32 @@
       </ng-template>
     </li>
   </ul>
-  <app-arbitration [baseUrl]="baseUrl"></app-arbitration>
+  <div [ngSwitch]="selectedValue">
+    <div *ngSwitchCase="'Cetus'">
+      <app-cetus-status [baseUrl]="baseUrl"></app-cetus-status>
+    </div>
+    <div *ngSwitchCase="'Events'">
+      <h1>Cetus</h1>
+    </div>
+    <div *ngSwitchCase="'Earth'">
+      <app-earthcycle [baseUrl]="baseUrl"></app-earthcycle>
+    </div>
+    <div *ngSwitchCase="'Alertas/Arbritragens'">
+      <app-alerts [baseUrl]="baseUrl"></app-alerts>
+      <app-arbitration [baseUrl]="baseUrl"></app-arbitration>
+    </div>
+    <div *ngSwitchCase="'Invasions'">
+      <h1>Invasions</h1>
+    </div>
+    <div *ngSwitchCase="'Syndicato'">
+      <h1>Syndicates</h1>
+    </div>
+    <div *ngSwitchCase="'Fissures'">
+      <h1>Fissures</h1>
+    </div>
+    <div *ngSwitchCase="'Recompensas'">
+      <h1>Recompensas</h1>
+    </div>
+
+  </div>
 </div>
