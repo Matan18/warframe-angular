@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { IInvasions } from './Invasion';
 import { ListService } from './list.service';
 
@@ -15,12 +14,27 @@ export class InvasionComponent implements OnInit {
     private listService: ListService
   ) { }
 
+  cores = {
+    Grineer: "#bd2b32",
+    Corpus: "#2b5168",
+    Infestado: "#418257"
+  }
+
   invasions: IInvasions[];
 
   ngOnInit(): void {
-    this.listService.getInvasions(this.baseUrl).subscribe(invasions=>
-      this.invasions=invasions 
-      )
+    this.listService.getInvasions(this.baseUrl).subscribe(invasions =>
+      this.invasions = invasions
+    )
   }
-
+ 
+  gradient(attackingFaction: string, deffendinFaction: string, completion: number): string {
+    if (completion > 100) {
+      return `linear-gradient(to right, ${this.cores[attackingFaction]} 100%, ${this.cores[attackingFaction]} 100% )`
+    }
+    if (completion < 0) {
+      return `linear-gradient(to right, ${this.cores[deffendinFaction]} 100%, ${this.cores[deffendinFaction]} 100% )`
+    }
+    return `linear-gradient(to right, ${this.cores[attackingFaction]} ${completion}%, ${this.cores[deffendinFaction]} ${100 - completion}% )`
+  }
 }

@@ -47,3 +47,10 @@ export interface IInvasions {
   ],
   desc: string
 }
+
+
+interface IColorPattern{
+  Grineer: "#bd2b32",
+  Corpus: "#2b5168",
+  Infestação: "#418257"
+}
