@@ -9,18 +9,28 @@ import { SearchService } from './search.service';
 })
 export class CetusStatusComponent implements OnChanges {
 
-  @Input() baseUrl:string;
-  
+  @Input() baseUrl: string;
+
   constructor(
-    private searchService:SearchService
+    private searchService: SearchService
   ) { }
 
-  cetusStatus:ICetusStatus;
-
-  ngOnChanges(): void {
-    this.searchService.getCetus(this.baseUrl).subscribe(cetusStatus=>
-      this.cetusStatus=cetusStatus
-      )
+  cetusStatus: ICetusStatus;
+  worldCycle = {
+    day: {
+      name: 'Dia',
+      opposite: 'noite'
+    },
+    night: {
+      name: 'Noite',
+      opposite: 'dia'
+    },
   }
 
+  ngOnChanges(): void {
+    this.searchService.getCetus(this.baseUrl).subscribe(cetusStatus =>
+      this.cetusStatus = cetusStatus
+    )
+  }
 }
+

@@ -15,6 +15,16 @@ export class EarthcycleComponent implements OnChanges {
   ) { }
 
   earthCycleInfo: IEarthCycle;
+  worldCycle = {
+    day: {
+      name: 'Dia',
+      opposite: 'noite'
+    },
+    night: {
+      name: 'Noite',
+      opposite: 'dia'
+    },
+  }
 
   ngOnChanges(): void {
     this.searchService.getEarthInfos(this.baseUrl).subscribe(earthInfos =>

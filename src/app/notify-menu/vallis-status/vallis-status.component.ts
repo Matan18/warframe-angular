@@ -14,6 +14,16 @@ export class VallisStatusComponent implements OnInit {
     private listService: ListService
   ) { }
   vallisStatus: IVallisStatus;
+  worldCycle={
+    warm:{
+      name:'Quente',
+      opposite:'frio'
+    },
+    cold:{
+      name:'Frio',
+      opposite:'quente'
+    }
+  }
 
   ngOnInit(): void {
     this.listService.getVallisStatus(this.baseUrl).subscribe(observer =>

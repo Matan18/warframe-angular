@@ -1,5 +1,7 @@
-
-<h1>Cetus</h1>
-<div *ngIf="cetusStatus">
-  <h1>{{cetusStatus.state}}</h1>
+<div>
+  <h2>Cetus</h2>
+  <div *ngIf="cetusStatus">
+    <h1>{{worldCycle[cetusStatus.state].name}}</h1>
+    <p>Vira {{worldCycle[cetusStatus.state].opposite}} às {{cetusStatus.expiry|date: "H:mm'hrs'"}}</p>
+  </div>
 </div>

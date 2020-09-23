@@ -9,13 +9,18 @@ import { map } from 'rxjs/operators';
 })
 export class NotifyMenuComponent implements OnInit {
 
-  @Input() baseUrl:string;
+  @Input() baseUrl: string;
   menuItems = new Observable<IItemList[]>(observer => {
+    itemList.map(item=>{
+      if(item.selected){
+        this.selectedValue=item.name
+      }
+    })
     observer.next(itemList)
     observer.complete()
   }
   )
-  selectedValue:string;
+  selectedValue: string;
 
   constructor() { }
 
@@ -24,11 +29,10 @@ export class NotifyMenuComponent implements OnInit {
   }
 
   onItemClick(id: number) {
-    console.log(id)
     this.menuItems = this.menuItems.pipe(map(items => items.map((item, index) => {
       if (index === id) {
         item.selected = true
-        this.selectedValue=item.name
+        this.selectedValue = item.name
       } else {
         item.selected = false
       }

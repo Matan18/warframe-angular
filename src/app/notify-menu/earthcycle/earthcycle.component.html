@@ -1,2 +1,7 @@
-<h1>Earth Cycle</h1>
-<strong>{{earthCycleInfo.state}}</strong>
+<div>
+  <h2>Earth Cycle</h2>
+  <div *ngIf="earthCycleInfo">
+    <h1>{{worldCycle[earthCycleInfo.state].name}}</h1>
+    <p>Vira {{worldCycle[earthCycleInfo.state].opposite}} às {{earthCycleInfo.expiry|date: "H:mm'hrs'"}}</p>
+  </div>
+</div>
