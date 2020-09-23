@@ -14,6 +14,7 @@ import { EarthcycleComponent } from './notify-menu/earthcycle/earthcycle.compone
 import { ArbitrationComponent } from './notify-menu/arbitration/arbitration.component';
 import { InvasionComponent } from './notify-menu/invasion/invasion.component';
 import { ConstructionProgressComponent } from './notify-menu/invasion/construction-progress/construction-progress.component';
+import { FissureComponent } from './notify-menu/fissure/fissure.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ConstructionProgressComponent } from './notify-menu/invasion/constructi
     EarthcycleComponent,
     ArbitrationComponent,
     InvasionComponent,
-    ConstructionProgressComponent
+    ConstructionProgressComponent,
+    FissureComponent
   ],
   imports: [
     BrowserModule,
