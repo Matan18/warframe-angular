@@ -1,0 +1,25 @@
+<div>
+  <h3>Invasões</h3>
+  <div>
+
+    <ul>
+      <li *ngFor="let invasion of invasions">
+        <div>
+          <strong>{{invasion.node}}: {{invasion.desc}}</strong>
+          <div class="progressive-bar" style="
+          background-image: {{gradient(invasion.attackingFaction, invasion.defendingFaction, invasion.completion)}}">
+          </div>
+          <div>
+            <p>{{invasion.attackingFaction}} {{invasion.completion| number: "2.1"}}%</p>
+            <p> {{100-invasion.completion| number: "2.1"}}% {{invasion.defendingFaction}}</p>
+          </div>
+          <div>
+            <p>{{invasion.attackerReward.itemString}}</p>
+            <p>{{invasion.defenderReward.itemString}}</p>
+          </div>
+        </div>
+      </li>
+      <app-construction-progress [baseUrl]='baseUrl'></app-construction-progress>
+    </ul>
+  </div>
+</div>
