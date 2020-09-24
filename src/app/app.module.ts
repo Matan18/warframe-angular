@@ -16,6 +16,7 @@ import { InvasionComponent } from './notify-menu/invasion/invasion.component';
 import { ConstructionProgressComponent } from './notify-menu/invasion/construction-progress/construction-progress.component';
 import { FissureComponent } from './notify-menu/fissure/fissure.component';
 import { VallisStatusComponent } from './notify-menu/vallis-status/vallis-status.component';
+import { EventsComponent } from './notify-menu/events/events.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { VallisStatusComponent } from './notify-menu/vallis-status/vallis-status
     InvasionComponent,
     ConstructionProgressComponent,
     FissureComponent,
-    VallisStatusComponent
+    VallisStatusComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
