@@ -1,11 +1,34 @@
-<div>
-  <h3>Evento</h3>
+<div class="container">
+  <h3>Eventos</h3>
   <ul>
     <li *ngFor="let event of events">
-      <div>
+      <div >
         <strong>{{event.description}}</strong>
-        <p>{{event.node}}</p>
+        <p *ngIf="event.node; else victimBlock">Local: {{event.node}}</p>
+        <ng-template #victimBlock>
+          <p>Local: {{event.victimNode}}</p>
+        </ng-template>
         <p>{{event.tooltip}}</p>
+        <p *ngIf="event.maximumScore; else healthBlock">Progress: {{event.currentScore/event.maximumScore | percent: ".0-2"}}</p>
+        <ng-template #healthBlock>
+          <p>{{event.health/100 | percent: ".0-2"}}</p>
+        </ng-template>
+        <div class="interimSteps" *ngIf="event.interimSteps.length" >
+          <strong>Recompensas</strong>
+          <div *ngFor="let item of event.interimSteps">
+            <strong>{{item.reward.asString}}</strong>
+            <p>Goal: {{item.goal}}</p>
+          </div>
+        </div>
+        <div *ngIf="event.jobs" class="jobs">
+          <div *ngFor="let item of event.jobs">
+            <strong>{{item.type}}</strong>
+            <strong>Possíveis recompensas:</strong>
+            <p *ngFor="let reward of item.rewardPool">
+              {{reward}}
+            </p>
+          </div>
+        </div>
       </div>
     </li>
   </ul>
