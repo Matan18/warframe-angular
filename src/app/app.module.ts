@@ -17,6 +17,7 @@ import { ConstructionProgressComponent } from './notify-menu/invasion/constructi
 import { FissureComponent } from './notify-menu/fissure/fissure.component';
 import { VallisStatusComponent } from './notify-menu/vallis-status/vallis-status.component';
 import { EventsComponent } from './notify-menu/events/events.component';
+import { SyndicateComponent } from './notify-menu/syndicate/syndicate.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { EventsComponent } from './notify-menu/events/events.component';
     ConstructionProgressComponent,
     FissureComponent,
     VallisStatusComponent,
-    EventsComponent
+    EventsComponent,
+    SyndicateComponent
   ],
   imports: [
     BrowserModule,
