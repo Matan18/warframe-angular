@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { DarvoDetailComponent } from './darvo-detail/darvo-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PlatformComponent } from './platform/platform.component';
+import { SyndicateComponent } from './notify-menu/syndicate/syndicate.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DarvoDetailComponent,
-    PlatformComponent
+    PlatformComponent,
+    SyndicateComponent
   ],
   imports: [
     BrowserModule,
