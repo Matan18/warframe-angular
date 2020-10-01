@@ -5,7 +5,7 @@
   <ul>
     <li *ngFor="let syndicate of syndicateList|async">
       <div *ngFor="let mission of syndicate.jobs">
-        <img src="../../../assets/SyndicateFlags/{{syndicate.id}}.png">
+        <img src="../../../assets/SyndicateFlags/{{StringTrim(syndicate.syndicate)}}.png">
         <div>
           <strong>{{mission.type}}</strong>
           <p>{{syndicate.syndicate}}</p>
@@ -13,7 +13,7 @@
         </div>
       </div>
       <div *ngFor="let mission of syndicate.nodes">
-        <img src="../../../assets/SyndicateFlags/{{syndicate.id}}.png">
+        <img src="../../../assets/SyndicateFlags/{{StringTrim(syndicate.syndicate)}}.png">
         <div>
           <strong>{{mission}}</strong>
           <p>{{syndicate.syndicate}}</p>

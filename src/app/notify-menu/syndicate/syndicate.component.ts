@@ -21,4 +21,11 @@ export class SyndicateComponent implements OnInit {
     this.syndicateList = this.listService.getSyndicates(this.baseUrl);
   }
 
+  StringTrim(value: string){
+    if(value=="Assassins"){
+      return "teste"
+    }
+    return value.trim()
+  }
+
 }
