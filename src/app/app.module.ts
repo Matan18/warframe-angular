@@ -11,6 +11,7 @@ import { ArsenalComponent } from './arsenal/arsenal.component';
 import { MenuComponent } from './arsenal/menu/menu.component';
 import { WarframesComponent } from './arsenal/menu/warframes/warframes.component';
 import { WeaponsComponent } from './arsenal/menu/weapons/weapons.component';
+import { BackButtonComponent } from "./back-button/back-button.component";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { WeaponsComponent } from './arsenal/menu/weapons/weapons.component';
     MenuComponent,
     WarframesComponent,
     WeaponsComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule,
