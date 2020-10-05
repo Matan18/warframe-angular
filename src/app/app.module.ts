@@ -8,13 +8,15 @@ import { DarvoDetailComponent } from './darvo-detail/darvo-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PlatformComponent } from './platform/platform.component';
 import { ArsenalComponent } from './arsenal/arsenal.component';
+import { BackButtonComponent } from "./back-button/back-button.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     DarvoDetailComponent,
     PlatformComponent,
-    ArsenalComponent
+    ArsenalComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule,
