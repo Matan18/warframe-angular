@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ListService } from './list.service';
+import { IWeapon } from './Weapon';
 
 @Component({
   selector: 'app-weapons',
@@ -7,15 +9,21 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class WeaponsComponent implements OnInit {
 
-  @Input() baseUrl:string;
-  constructor() { }
+  @Input() baseUrl: string;
+  @Output() exit = new EventEmitter();
+  constructor(
+    private listService: ListService
+  ) { }
 
-  @Output() exit=new EventEmitter();
+  weapons: IWeapon[];
 
   ngOnInit(): void {
+    this.listService.getWeapons(this.baseUrl).subscribe(weapons =>
+      this.weapons = weapons
+    )
   }
 
-  onClick(){
+  onClick() {
     this.exit.emit()
   }
 }
