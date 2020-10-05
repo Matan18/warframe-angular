@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ListService } from './list.service';
 
 @Component({
   selector: 'app-warframes',
@@ -8,14 +9,17 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class WarframesComponent implements OnInit {
 
   @Input() baseUrl: string;
-  constructor() { }
+  constructor(
+    listService: ListService
+  ) { }
 
-  @Output() exit=new EventEmitter();
+  @Output() exit = new EventEmitter();
 
   ngOnInit(): void {
+
   }
 
-  onClick(){
+  onClick() {
     this.exit.emit()
   }
 }
