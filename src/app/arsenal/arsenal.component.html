@@ -13,9 +13,7 @@
   </ul>
   <div [ngSwitch]="selectedItem">
     <div *ngSwitchCase="'main'">
-      <h1>
-        Warframe
-      </h1>
+      <app-menu [baseUrl]="baseUrl"></app-menu>
     </div>
     <div *ngSwitchCase="'companion'">
       <h1>

@@ -1,0 +1,25 @@
+<div>
+  <h3>ARMAMENTO TENNO</h3>
+  <div [ngSwitch]="selectedMenu">
+    <div *ngSwitchCase="'main'">
+      <div>
+        <div class="itens" (click)="onClick('warframes')">
+          <h4>WARFRAMES</h4>
+        </div>
+        <div class="itens" (click)="onClick('weapons')">
+          <h4>WEAPONS</h4>
+        </div>
+      </div>
+    </div>
+    <div *ngSwitchCase="'warframes'">
+      <app-warframes [baseUrl]="baseUrl" (exit)="onClick('main')">
+      </app-warframes>
+    </div>
+    <div *ngSwitchCase="'weapons'">
+      <app-weapons [baseUrl]="baseUrl" (exit)="onClick('main')">
+
+      </app-weapons>
+    </div>
+
+  </div>
+</div>

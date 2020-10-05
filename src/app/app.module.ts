@@ -8,13 +8,19 @@ import { DarvoDetailComponent } from './darvo-detail/darvo-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PlatformComponent } from './platform/platform.component';
 import { ArsenalComponent } from './arsenal/arsenal.component';
+import { MenuComponent } from './arsenal/menu/menu.component';
+import { WarframesComponent } from './arsenal/menu/warframes/warframes.component';
+import { WeaponsComponent } from './arsenal/menu/weapons/weapons.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DarvoDetailComponent,
     PlatformComponent,
-    ArsenalComponent
+    ArsenalComponent,
+    MenuComponent,
+    WarframesComponent,
+    WeaponsComponent,
   ],
   imports: [
     BrowserModule,
