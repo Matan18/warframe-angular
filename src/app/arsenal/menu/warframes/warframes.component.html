@@ -1,3 +1,15 @@
-<p>warframes works!</p>
+<div>
+  <ul>
+    <li *ngFor="let warframe of warframes">
+      <div class="warframe">
+        <img src="{{warframe.wikiaThumbnail}}" alt="{{warframe.name}} Thumbnail">
+        <div>
+          <p>{{warframe.name}}</p>
+        </div>
+      </div>
+
+    </li>
+  </ul>
+</div>
 
 <app-back-button [value]="'VOLTAR'" (click)="onClick()"></app-back-button>

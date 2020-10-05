@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { IWarframe } from './Warframe';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +12,9 @@ export class ListService {
     private http: HttpClient
   ) { }
 
-  param: string = '/warframes'
+  param: string = 'warframes'
 
-  getWarframes(baseUrl: string) {
-    return this.http.get(baseUrl + this.param)
+  getWarframes(baseUrl: string): Observable<IWarframe[]> {
+    return this.http.get<IWarframe[]>(baseUrl + this.param)
   }
 }

@@ -9,7 +9,7 @@ export class MenuComponent implements OnInit {
 
   @Input() baseUrl: string;
   constructor() { }
-  selectedMenu: string = 'main'
+  selectedMenu: string = 'warframes'
 
   ngOnInit(): void {
   }
