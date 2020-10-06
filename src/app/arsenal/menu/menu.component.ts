@@ -9,7 +9,7 @@ export class MenuComponent implements OnInit {
 
   @Input() baseUrl: string;
   constructor() { }
-  selectedMenu: string = 'weapons'
+  selectedMenu: string = 'main'
 
   ngOnInit(): void {
   }
