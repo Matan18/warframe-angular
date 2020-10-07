@@ -21,9 +21,16 @@ export class ArsenalComponent implements OnInit {
     })
   }
 
+  clearSelected(){
+    this.menuItems.map(item=>{
+      item.selected=false
+    })
+    this.selectedItem=''
+  }
   onItemClick(id: number) {
     this.menuItems.map(item => {
       item.selected = false
+
       if (item.id == id) {
         this.selectedItem = item.type
         item.selected = true
@@ -44,20 +51,14 @@ interface IMenuItem {
 const MenuItems: IMenuItem[] = [
   {
     id: 0,
-    name: 'Principal',
-    type: 'main',
+    name: 'Warframes',
+    type: 'warframes',
     selected: true
   },
   {
     id: 1,
-    name: 'robot',
-    type: 'companion',
+    name: 'Weapons',
+    type: 'weapons',
     selected: false,
-  },
-  {
-    id: 2,
-    name: 'archwing',
-    type: 'archwing',
-    selected: false
   }
 ]

@@ -1,0 +1,18 @@
+<div>
+  <ul>
+    <li *ngFor="let warframe of warframes">
+      <div class="warframe">
+        <img *ngIf="warframe.wikiaThumbnail; else PlaceholderImage" src="{{warframe.wikiaThumbnail}}" alt="{{warframe.name}} Thumbnail">
+        <ng-template #PlaceholderImage>
+          <img src="../../../assets/warframesPlaceholder.png" alt="PlaceholderImage">
+        </ng-template>
+        <div>
+          <p>{{warframe.name}}</p>
+        </div>
+      </div>
+
+    </li>
+  </ul>
+</div>
+
+<app-back-button [value]="'VOLTAR'" (click)="onClick()"></app-back-button>

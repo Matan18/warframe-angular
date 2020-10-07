@@ -8,9 +8,8 @@ import { DarvoDetailComponent } from './darvo-detail/darvo-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PlatformComponent } from './platform/platform.component';
 import { ArsenalComponent } from './arsenal/arsenal.component';
-import { MenuComponent } from './arsenal/menu/menu.component';
-import { WarframesComponent } from './arsenal/menu/warframes/warframes.component';
-import { WeaponsComponent } from './arsenal/menu/weapons/weapons.component';
+import { WarframesComponent } from './arsenal/warframes/warframes.component';
+import { WeaponsComponent } from './arsenal/weapons/weapons.component';
 import { BackButtonComponent } from "./back-button/back-button.component";
 
 @NgModule({
@@ -19,7 +18,6 @@ import { BackButtonComponent } from "./back-button/back-button.component";
     DarvoDetailComponent,
     PlatformComponent,
     ArsenalComponent,
-    MenuComponent,
     WarframesComponent,
     WeaponsComponent,
     BackButtonComponent

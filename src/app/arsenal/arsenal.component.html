@@ -1,7 +1,7 @@
 <div>
   <ul>
     <li *ngFor="let item of menuItems">
-      <div *ngIf="item.selected; else elseBlock" class='selected'>
+      <div *ngIf="item.selected; else elseBlock" class='selected' (click)="clearSelected()">
         <p>{{item.name}}</p>
       </div>
       <ng-template #elseBlock>
@@ -12,18 +12,14 @@
     </li>
   </ul>
   <div [ngSwitch]="selectedItem">
-    <div *ngSwitchCase="'main'">
-      <app-menu [baseUrl]="baseUrl"></app-menu>
+    <div *ngSwitchCase="'warframes'">
+      <app-warframes [baseUrl]="baseUrl"></app-warframes>
     </div>
-    <div *ngSwitchCase="'companion'">
-      <h1>
-        Companion
-      </h1>
+    <div *ngSwitchCase="'weapons'">
+      <app-weapons [baseUrl]="baseUrl"></app-weapons>
     </div>
-    <div *ngSwitchCase="'archwing'">
-      <h1>
-        archwing
-      </h1>
+    <div *ngSwitchDefault>
+
     </div>
   </div>
 </div>
