@@ -1,14 +1,9 @@
 <div>
   <ul>
     <li *ngFor="let item of menuItems|async">
-      <div *ngIf="item.selected;else elseBlock" class='selected'>
+      <div (click)="onItemClick(item.id)" class='{{item.selected? "selected":""}}'>
         <p>{{item.name}}</p>
       </div>
-      <ng-template #elseBlock>
-        <div (click)="onItemClick(item.id)">
-          <p>{{item.name}}</p>
-        </div>
-      </ng-template>
     </li>
   </ul>
   <div [ngSwitch]="selectedValue">
@@ -36,6 +31,9 @@
     </div>
     <div *ngSwitchCase="'Recompensas'">
       <h1>Recompensas</h1>
+    </div>
+    <div *ngSwitchDefault>
+
     </div>
 
   </div>

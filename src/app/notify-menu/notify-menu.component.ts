@@ -11,9 +11,9 @@ export class NotifyMenuComponent implements OnInit {
 
   @Input() baseUrl: string;
   menuItems = new Observable<IItemList[]>(observer => {
-    itemList.map(item=>{
-      if(item.selected){
-        this.selectedValue=item.name
+    itemList.map(item => {
+      if (item.selected) {
+        this.selectedValue = item.name
       }
     })
     observer.next(itemList)
@@ -31,6 +31,11 @@ export class NotifyMenuComponent implements OnInit {
   onItemClick(id: number) {
     this.menuItems = this.menuItems.pipe(map(items => items.map((item, index) => {
       if (index === id) {
+        if (item.selected) {
+          item.selected = false
+          this.selectedValue = ''
+          return item
+        }
         item.selected = true
         this.selectedValue = item.name
       } else {
