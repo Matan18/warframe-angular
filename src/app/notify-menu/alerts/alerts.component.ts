@@ -13,7 +13,7 @@ export class AlertsComponent implements OnChanges {
   constructor(
     private listService: ListService
   ) { }
-  alerts: IAlerts[]
+  alerts: IAlerts[]=[]
 
   ngOnChanges(): void {
     this.listService.getAlerts(this.baseUrl).subscribe(alerts =>
