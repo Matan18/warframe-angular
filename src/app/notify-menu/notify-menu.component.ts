@@ -63,7 +63,7 @@ const itemList: IItemList[] = [
   {
     id: 2,
     name: 'Alertas/Arbritragens',
-    selected: false
+    selected: true
   },
   {
     id: 3,
