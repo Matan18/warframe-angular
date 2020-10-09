@@ -21,8 +21,9 @@
       <app-events [baseUrl]="baseUrl"></app-events>
     </div>
     <div *ngSwitchCase="'Alertas/Arbritragens'">
-      <app-alerts [baseUrl]="baseUrl"></app-alerts>
       <app-arbitration [baseUrl]="baseUrl"></app-arbitration>
+      <app-alerts [baseUrl]="baseUrl"></app-alerts>
+      <app-kuva [baseUrl]="baseUrl"></app-kuva>
     </div>
     <div *ngSwitchCase="'Invasions'">
       <app-invasion [baseUrl]="baseUrl"></app-invasion>
