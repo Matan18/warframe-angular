@@ -1,0 +1,23 @@
+<div>
+  <ul>
+    <li *ngFor="let arcane of arcanes">
+      <div class="arcane {{arcane.selected?'selected':''}}" (click)="onSelect(arcane.regex)">
+        <!-- <img *ngIf="arcane.thumbnail; else PlaceholderImage" src="{{arcane.thumbnail}}"
+          alt="{{arcane.name}} Thumbnail"> -->
+        <!-- <ng-template #PlaceholderImage> -->
+        <img src="../../../assets/arcanePlaceholder.png" alt="PlaceholderImage">
+        <!-- </ng-template> -->
+        <div>
+          <p>{{arcane.name}}</p>
+        </div>
+        <div *ngIf="arcane.selected" class="effect">
+          <h3>Effect: {{arcane.effect}}</h3>
+          <h4>Rariry: {{arcane.rarity}}</h4>
+        </div>
+      </div>
+
+    </li>
+  </ul>
+</div>
+
+<app-back-button [value]="'VOLTAR'" (click)="onClick()"></app-back-button>

@@ -14,18 +14,18 @@ export class ArsenalComponent implements OnInit {
   selectedItem: string;
 
   ngOnInit(): void {
-    this.menuItems.map(item=>{
-      if(item.selected){
-        this.selectedItem=item.type
+    this.menuItems.map(item => {
+      if (item.selected) {
+        this.selectedItem = item.type
       }
     })
   }
 
-  clearSelected(){
-    this.menuItems.map(item=>{
-      item.selected=false
+  clearSelected() {
+    this.menuItems.map(item => {
+      item.selected = false
     })
-    this.selectedItem=''
+    this.selectedItem = ''
   }
   onItemClick(id: number) {
     this.menuItems.map(item => {
@@ -53,12 +53,18 @@ const MenuItems: IMenuItem[] = [
     id: 0,
     name: 'Warframes',
     type: 'warframes',
-    selected: true
+    selected: false
   },
   {
     id: 1,
     name: 'Weapons',
     type: 'weapons',
     selected: false,
+  },
+  {
+    id: 2,
+    name: 'Arcanes',
+    type: 'arcanes',
+    selected: true
   }
 ]
