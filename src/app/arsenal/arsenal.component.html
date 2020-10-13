@@ -1,0 +1,27 @@
+<div>
+  <ul>
+    <li *ngFor="let item of menuItems">
+      <div *ngIf="item.selected; else elseBlock" class='selected' (click)="clearSelected()">
+        <p>{{item.name}}</p>
+      </div>
+      <ng-template #elseBlock>
+        <div (click)="onItemClick(item.id)">
+          <p>{{item.name}}</p>
+        </div>
+      </ng-template>
+    </li>
+  </ul>
+  <div [ngSwitch]="selectedItem">
+    <div *ngSwitchCase="'warframes'">
+      <app-warframes [baseUrl]="baseUrl"></app-warframes>
+    </div>
+    <div *ngSwitchCase="'weapons'">
+      <app-weapons [baseUrl]="baseUrl"></app-weapons>
+    </div>
+    <div *ngSwitchCase="'arcanes'">
+      <app-arcanes [baseUrl]="baseUrl"></app-arcanes>
+    </div>
+    <div *ngSwitchDefault>
+    </div>
+  </div>
+</div>

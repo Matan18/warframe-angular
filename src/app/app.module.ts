@@ -21,6 +21,10 @@ import { VallisStatusComponent } from './notify-menu/vallis-status/vallis-status
 import { EventsComponent } from './notify-menu/events/events.component';
 import { SyndicateComponent } from './notify-menu/syndicate/syndicate.component';
 import { KuvaComponent } from './notify-menu/kuva/kuva.component';
+import { ArsenalComponent } from './arsenal/arsenal.component';
+import { WarframesComponent } from './arsenal/warframes/warframes.component';
+import { WeaponsComponent } from './arsenal/weapons/weapons.component';
+import { ArcanesComponent } from './arsenal/arcanes/arcanes.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,12 @@ import { KuvaComponent } from './notify-menu/kuva/kuva.component';
     VallisStatusComponent,
     EventsComponent,
     SyndicateComponent,
-    KuvaComponent
+    KuvaComponent,
+    ArsenalComponent,
+    WarframesComponent,
+    WeaponsComponent,
+    BackButtonComponent,
+    ArcanesComponent
   ],
   imports: [
     BrowserModule,

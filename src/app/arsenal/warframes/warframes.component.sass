@@ -1,0 +1,63 @@
+*
+  margin: 0
+  padding: 0
+div
+  background: #13242b
+  width: 505px
+  height: 350px
+
+  ul
+    position: relative
+    margin: 0
+    padding: 0
+    width: 505px
+    height: 350px
+    overflow: auto
+
+    &::-webkit-scrollbar
+      width: 9px
+
+    &::-webkit-scrollbar-track
+      background-color: lighten(#374248, 20)
+
+    &::-webkit-scrollbar-thumb
+      background-color: #cccccc
+      border-radius: 5px
+      height: 60px
+
+
+    &::-webkit-scrollbar-button
+      background-color: #000
+      height: 5px
+
+    &::-webkit-scrollbar-corner
+      background-color: black
+
+    li
+      display: block
+      list-style-type: none
+      margin: 0px
+
+      .warframe
+        background: lighten(#13242b, 6)
+        border: #374248 solid 1px
+        width: 150px
+        height: 94px
+        margin: 5px 0px 10px 10px
+        img
+          margin: 0px
+          padding: 0px
+          width: 150px
+          height: 70px
+          object-fit: cover
+          object-position: 0 0
+        div
+          width: 150px
+          height: 18px
+          padding: 0px
+          margin: 0
+          background: #fff
+          p
+            margin: 2px
+    li:nth-child(3n),li:nth-child(3n+1),li:nth-child(3n+2)
+      float: left
