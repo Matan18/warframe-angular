@@ -6,15 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DarvoDetailComponent } from './darvo-detail/darvo-detail.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PlatformComponent } from './platform/platform.component';
+import { PlatformComponent } from './header/platform/platform.component';
 import { BackButtonComponent } from "./back-button/back-button.component";
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DarvoDetailComponent,
     PlatformComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
