@@ -68,7 +68,7 @@ const itemList: IItemList[] = [
   {
     id: 2,
     name: 'Alertas/Arbritragens',
-    selected: true
+    selected: false
   },
   {
     id: 3,
@@ -78,16 +78,11 @@ const itemList: IItemList[] = [
   {
     id: 4,
     name: 'Syndicato',
-    selected: false
+    selected: true
   },
   {
     id: 5,
     name: 'Fissures',
     selected: false
-  },
-  {
-    id: 6,
-    name: 'Rewards',
-    selected: false
-  },
+  }
 ]
