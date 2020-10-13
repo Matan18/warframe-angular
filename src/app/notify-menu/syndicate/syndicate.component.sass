@@ -7,6 +7,7 @@ div
   background: #13242b
   color: #fff
   max-width: 600px
+
   h3
     margin: 8px
     border-bottom: #fff solid 1px
@@ -16,6 +17,25 @@ div
     max-height: 450px
     overflow: auto
     list-style: none
+
+    &::-webkit-scrollbar
+      width: 9px
+
+    &::-webkit-scrollbar-track
+      background-color: lighten(#374248, 20)
+
+    &::-webkit-scrollbar-thumb
+      background-color: #cccccc
+      border-radius: 5px
+      height: 60px
+
+    &::-webkit-scrollbar-button
+      background-color: #000
+      height: 5px
+
+    &::-webkit-scrollbar-corner
+      background-color: black
+
     ul
       overflow: hidden
     div

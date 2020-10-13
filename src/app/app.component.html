@@ -1,10 +1,10 @@
 <header>
   <app-header (onChangePlatform)="changePlatform($event)"></app-header>
-  <div>
-    <app-notify-menu [baseUrl]='baseUrl'></app-notify-menu>
-  </div>
 </header>
 <!-- <app-darvo-detail [baseUrl]="baseUrl" ></app-darvo-detail> -->
+<div>
+  <app-notify-menu [baseUrl]='baseUrl'></app-notify-menu>
+</div>
 <app-arsenal [baseUrl]="url"></app-arsenal>
 <router-outlet></router-outlet>
 
