@@ -1,0 +1,7 @@
+<div>
+  <h2>Vallis</h2>
+  <div *ngIf='vallisStatus'>
+    <h1>{{worldCycle[vallisStatus.state].name}}</h1>
+    <p>Vira {{worldCycle[vallisStatus.state].opposite}} às {{vallisStatus.expiry|date: "H:mm'hrs'"}}</p>
+  </div>
+</div>

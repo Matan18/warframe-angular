@@ -63,8 +63,6 @@ export interface IPersistentEnemies {
   pid: string
 }
 
-
-
 // https://api.warframestat.us/pc/arbitration
 export interface IArbitrationData {
   activation: string,

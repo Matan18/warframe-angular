@@ -9,6 +9,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { PlatformComponent } from './header/platform/platform.component';
 import { BackButtonComponent } from "./back-button/back-button.component";
 import { HeaderComponent } from './header/header.component';
+import { NotifyMenuComponent } from './notify-menu/notify-menu.component';
+import { CetusStatusComponent } from "./notify-menu/cetus-status/cetus-status.component";
+import { AlertsComponent } from './notify-menu/alerts/alerts.component';
+import { EarthcycleComponent } from './notify-menu/earthcycle/earthcycle.component';
+import { ArbitrationComponent } from './notify-menu/arbitration/arbitration.component';
+import { InvasionComponent } from './notify-menu/invasion/invasion.component';
+import { ConstructionProgressComponent } from './notify-menu/invasion/construction-progress/construction-progress.component';
+import { FissureComponent } from './notify-menu/fissure/fissure.component';
+import { VallisStatusComponent } from './notify-menu/vallis-status/vallis-status.component';
+import { EventsComponent } from './notify-menu/events/events.component';
+import { SyndicateComponent } from './notify-menu/syndicate/syndicate.component';
+import { KuvaComponent } from './notify-menu/kuva/kuva.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +28,19 @@ import { HeaderComponent } from './header/header.component';
     DarvoDetailComponent,
     PlatformComponent,
     BackButtonComponent,
-    HeaderComponent
+    HeaderComponent,
+    NotifyMenuComponent,
+    CetusStatusComponent,
+    AlertsComponent,
+    EarthcycleComponent,
+    ArbitrationComponent,
+    InvasionComponent,
+    ConstructionProgressComponent,
+    FissureComponent,
+    VallisStatusComponent,
+    EventsComponent,
+    SyndicateComponent,
+    KuvaComponent
   ],
   imports: [
     BrowserModule,

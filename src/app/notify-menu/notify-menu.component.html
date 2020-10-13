@@ -1,0 +1,40 @@
+<div>
+  <ul>
+    <li *ngFor="let item of menuItems|async">
+      <div (click)="onItemClick(item.id)" class='{{item.selected? "selected":""}}'>
+        <p>{{item.name}}</p>
+      </div>
+    </li>
+  </ul>
+  <div [ngSwitch]="selectedValue">
+    <div *ngSwitchCase="'World-Cycles'">
+      <app-cetus-status [baseUrl]="baseUrl"></app-cetus-status>
+      <app-earthcycle [baseUrl]="baseUrl"></app-earthcycle>
+      <app-vallis-status [baseUrl]="baseUrl"></app-vallis-status>
+    </div>
+    <div *ngSwitchCase="'Events'">
+      <app-events [baseUrl]="baseUrl"></app-events>
+    </div>
+    <div *ngSwitchCase="'Alertas/Arbritragens'">
+      <app-arbitration [baseUrl]="baseUrl"></app-arbitration>
+      <app-alerts [baseUrl]="baseUrl"></app-alerts>
+      <app-kuva [baseUrl]="baseUrl"></app-kuva>
+    </div>
+    <div *ngSwitchCase="'Invasions'">
+      <app-invasion [baseUrl]="baseUrl"></app-invasion>
+    </div>
+    <div *ngSwitchCase="'Syndicato'">
+      <app-syndicate [baseUrl]="baseUrl"></app-syndicate>
+    </div>
+    <div *ngSwitchCase="'Fissures'">
+      <app-fissure [baseUrl]="baseUrl"></app-fissure>
+    </div>
+    <div *ngSwitchCase="'Recompensas'">
+      <h1>Recompensas</h1>
+    </div>
+    <div *ngSwitchDefault>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div>
+  <div>
+    <h3>Sindicatos</h3>
+  </div>
+  <ul>
+    <li *ngFor="let syndicate of syndicateList|async">
+      <div *ngFor="let mission of syndicate.jobs">
+        <img src="../../../assets/SyndicateFlags/{{StringTrim(syndicate.syndicate)}}.png">
+        <div>
+          <strong>{{mission.type}}</strong>
+          <div>
+            <p>{{syndicate.syndicate}}</p>
+            <p>{{syndicate.eta}}</p>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let mission of syndicate.nodes">
+        <img src="../../../assets/SyndicateFlags/{{StringTrim(syndicate.syndicate)}}.png">
+        <div>
+          <strong>{{mission}}</strong>
+          <div>
+            <p>{{syndicate.syndicate}}</p>
+            <p>{{syndicate.eta}}</p>
+          </div>
+        </div>
+
+      </div>
+    </li>
+  </ul>
+</div>
