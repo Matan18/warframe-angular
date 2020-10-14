@@ -78,7 +78,7 @@ const itemList: IItemList[] = [
   {
     id: 4,
     name: 'Syndicato',
-    selected: true
+    selected: false
   },
   {
     id: 5,

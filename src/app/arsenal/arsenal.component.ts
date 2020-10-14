@@ -65,6 +65,6 @@ const MenuItems: IMenuItem[] = [
     id: 2,
     name: 'Arcanes',
     type: 'arcanes',
-    selected: true
+    selected: false
   }
 ]

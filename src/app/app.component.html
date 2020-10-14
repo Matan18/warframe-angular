@@ -3,9 +3,10 @@
 </header>
 <!-- <app-darvo-detail [baseUrl]="baseUrl" ></app-darvo-detail> -->
 <div>
+  <app-arsenal [baseUrl]="url"></app-arsenal>
+  <input placeholder="Faça sua pesquisa"/>
   <app-notify-menu [baseUrl]='baseUrl'></app-notify-menu>
 </div>
-<app-arsenal [baseUrl]="url"></app-arsenal>
 <router-outlet></router-outlet>
 
 <footer>
