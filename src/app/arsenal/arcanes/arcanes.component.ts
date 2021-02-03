@@ -37,7 +37,6 @@ export class ArcanesComponent implements OnInit {
       }
       return arcane
     })
-
   }
 
   onClick() {
